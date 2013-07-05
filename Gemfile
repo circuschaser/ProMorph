@@ -38,9 +38,10 @@ group :test do
 	# gem 'rb-fsevent', '0.9.1', :require => false 
 	# gem 'growl', '1.0.3'
 end
-# group :production do 
-# 	gem 'pg', '0.12.2'
-# end
+
+group :production do 
+	gem 'pg', '0.12.2'
+end
 
 
 # To use ActiveModel has_secure_password
