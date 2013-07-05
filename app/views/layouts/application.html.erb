@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+
+      <%= stylesheet_link_tag 'humanity/jquery-ui-1.8rc3.custom', :media => 'screen' %>
+      <%= stylesheet_link_tag 'custom' %>
+
+      <%= javascript_include_tag 'jquery-1.4.2.min','jquery-ui-1.8rc3.custom.min', 'jquery.livequery','jquery.hoverIntent.minified', 'application' %>
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <%= render 'layouts/public' %>
+
+
+    <div id="content">
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+        <% end %>
+
+        <%= yield %>
+      
+      </div>
+    </div>
+
+      <%= render 'layouts/footer' %>
+
+      <script type="text/javascript">
+        <%= yield :javascript %>
+      </script>
+    </div>
+
+<!--     <div class="container">
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+ -->    
+  </body>
+</html>

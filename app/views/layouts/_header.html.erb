@@ -1,0 +1,47 @@
+<div id="header">
+  <div class="container">
+    
+    <div id="logo">
+      <%= link_to image_tag("logo.png"), "/" %>
+    </div>
+
+    <div id="topbar">
+
+<!-- missing -->
+
+      <div id="navmenu">
+        <span><%= link_to "My Music", 'music#index' %></span>
+        <span><%= link_to "My Circles", "#" %></span>
+        <span><%= link_to "My Setlists", "#" %></span>
+      <!-- missing -->
+
+        <div class="megamenu">
+          <span><%= link_to "Admin", "/dashboard" %></span>
+          <div>
+            <span>You're an admin.</span><br/>
+            <span>Don't let it get to your head.</span><br/>
+          </div>
+        </div>
+      <!-- missing END -->
+      </div>
+
+      <div id="toprightbar">
+        <div id="current_user_info">
+
+<!-- missing -->
+
+        </div>
+
+        <div id="search_form">
+          <%= form_for "/pieces" do |f| %>
+          <span>Search</span> <%= f.text_field :search %>
+          <% end %>
+        </div>
+        
+      </div>
+
+<!-- missing -->
+
+    </div>
+  </div>        
+</div>

@@ -1,0 +1,24 @@
+<div id="header">
+  <div class="container">
+    
+    <div id="logo">
+      <%= link_to image_tag("logo.png"), "/" %>
+    </div>
+    
+    <div id="topbar">
+
+      <div id="toprightbar">
+        <div id="login_header_form">
+          <%= form_for :session, :url => "#" do |f| %>
+          <!-- #session_path(:return_to => dashboard_path)  -->
+            <%= f.label :email %>
+            <%= f.text_field :email, :class => "rounded" %>
+            <%= f.label :password %>
+            <%= f.password_field :password, :class => "rounded" %>
+            <%= f.submit "LOGIN", class: "roundbutton"%>  or  <%= link_to 'Sign up', '/signup' %>
+        <% end -%>
+        </div>
+      </div>
+    </div>
+  </div>        
+</div>

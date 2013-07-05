@@ -1,0 +1,12 @@
+<div id="content_main">
+  <div class="paper_wrap">
+    <div class="paper">
+      <h1>New Music</h1>
+      <% semantic_form_for @piece, :url => music_index_path do |form| %>
+        <%= render :partial => 'form', :object => form %>
+      <% end %>
+    </div>
+  </div>
+</div> 
+<div id="sidebar">
+</div> 

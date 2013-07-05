@@ -1,0 +1,18 @@
+<% form.inputs :name => "About this piece" do %>
+  <%= form.input :name, :label => 'Title' %>
+  <%= form.input :alt_name, :label => 'Alternate Title' %>
+  <%= form.input :copyright, :label => 'Copyright' %>
+  <%= form.input :publisher, :label => 'Publisher' %>
+  <%= form.input :public, :label => 'This piece is visible to all users' %>
+<% end %>
+<% form.inputs :name => "Extended tune data" do %>
+  <% form.semantic_fields_for :tune do |tune|%>
+    <%= tune.input :tune_name, :label => 'Tune Name' %>
+    <%= tune.input :alt_tune_name, :label => 'Alternate Tune Name' %>
+    <%= tune.input :origin_year, :label => 'Year or century of origin' %>
+    <%= tune.input :origin_country, :label => 'Country or region of origin', :as => :string %>
+    <%= tune.input :copyright, :label => 'Tune Copyright' %>
+    <%= tune.input :publisher, :label => 'Tune Publisher' %>
+  <% end %>
+<% end %>
+<%= form.buttons %>
