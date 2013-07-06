@@ -35,6 +35,40 @@ html, body {
   height: 100%;
 }
 
+h3, h2 {
+  font-family: Georgia;
+  font-weight: normal;
+}
+
+#content #linkbutton a {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, #959186, #626054);
+  color: #fff;
+  /*border: 1px solid gray;*/
+  border-radius: 5px;
+  text-align:center;
+  margin: 4px;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+}
+
+/* DELETE THIS AFTER DELETING CIRCUSCHASER LINK*/
+#content #circuschaser a {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, #959186, #626054);
+  font-family:Courier;
+  color: #fff;
+  /*border: 1px solid gray;*/
+  border-radius: 5px;
+  text-align:center;
+  margin: 4px;
+  padding-left: 8px;
+  padding-top: 6px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+}
 
 .container {
   width: 960px;
@@ -72,6 +106,13 @@ html, body {
   float: right;
 }
 
+#toprightbar2 {
+  color: #B08D71;
+  font-size: 10px;
+  padding-right: 10px;
+  float: right;
+}
+
 #navmenu {
   float: left;
   margin-top: 4px;
@@ -92,6 +133,7 @@ html, body {
 
 
 #current_user_info {
+  font-weight: bold;
   display: inline;
   margin-right: 18px;
 }
@@ -181,7 +223,7 @@ html, body {
 }
 
 #login_header_form form input.rounded {
-  width: 100px;
+  width: 150px;
   height: 18px;
   border: 1px solid #B1B1B1;
   -moz-border-radius: 100px;
@@ -197,34 +239,27 @@ html, body {
   box-shadow: inset 2px 3px 5px gray;
 }
 
-#login_header_form form input.roundbutton {
-    color: white;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-    font-size: 90%;
-    background: linear-gradient(to bottom, #959387, #626054);
-    background-repeat: repeat-x;
-    border-color: #626054;
-    height: 18px;
-    margin-bottom: 0px;
-    margin-left: 15px;
-    margin-right: 10px;
-    padding-bottom: 5px;
+#login_header_form form input.btn-mini {
+  color: white;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  font-size: 90%;
+  background: linear-gradient(to bottom, #959186, #626054);
+  background-repeat: repeat-x;
+  border-color: #626054;
+  border-radius: 2px;
+  height: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 10px;
 }
 
-/*#roundbtn {*/
-    /*color: white;*/
-    /*text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);*/
-    /*font-size: 90%;*/
-    /*background-color: rgb(0, 108, 204);*/
-    /*background-image: linear-gradient(to bottom, #959387, #626054);*/
-    /*background-repeat: repeat-x;*/
-    /*border-color: rgb(0, 68, 204) rgb(0, 68, 204) rgb(0, 42, 128);*/
-    /*height: 15px;*/
-    /*margin-bottom: 0px;*/
-    /*margin-left: 20px;*/
-    /*margin-right: 20px;*/
-  /*}*/
-
+.btn-small {
+  color: white;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, #959387, #626054);
+  margin-top: 10px;
+}
 #content {
   margin-top: 0;
   padding-top: 18px;

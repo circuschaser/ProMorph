@@ -2,47 +2,55 @@
   <div class="container">
     
     <div id="logo">
+      <% if signed_in? %>
+      <%= link_to image_tag("logo.png"), "/home" %>
+      <% else %>
       <%= link_to image_tag("logo.png"), "/" %>
+      <% end %>
     </div>
 
-    <div id="topbar">
+    <% if signed_in? %>
 
-<!-- missing -->
-
-      <div id="navmenu">
-        <span><%= link_to "My Music", 'music#index' %></span>
-        <span><%= link_to "My Circles", "#" %></span>
-        <span><%= link_to "My Setlists", "#" %></span>
-      <!-- missing -->
-
-        <div class="megamenu">
-          <span><%= link_to "Admin", "/dashboard" %></span>
-          <div>
-            <span>You're an admin.</span><br/>
-            <span>Don't let it get to your head.</span><br/>
+      <div id="topbar">
+  <!-- missing -->
+          <div id="navmenu">
+            <span><%= link_to "My Music", '#' %></span>
+            <span><%= link_to "My Circles", "#" %></span>
+            <span><%= link_to "My Setlists", "#" %></span>
+            <span><%= link_to "My Account", current_user %></span>
+  <!-- missing -->
+            <div class="megamenu">
+              <span><%= link_to "Admin", "#" %></span>
+              <div>
+                <span>You're an admin.</span><br/>
+                <span>Don't let it get to your head.</span><br/>
+              </div>
+            </div>
+  <!-- missing END -->
           </div>
-        </div>
-      <!-- missing END -->
+          <div id="toprightbar">
+            <div id="current_user_info">
+              <%= link_to "Sign out", signout_path, method: "delete" %>
+  <!-- missing -->
+            </div>
+            <div id="search_form">
+              <%= form_for "/pieces" do |f| %>
+              <span>Search</span> <%= f.text_field :search %>
+              <% end %>
+            </div>
+          </div>
       </div>
 
-      <div id="toprightbar">
-        <div id="current_user_info">
-          <%= link_to "Sign Up", "/signup" %>
-
-<!-- missing -->
-
-        </div>
-
-        <div id="search_form">
-          <%= form_for "/pieces" do |f| %>
-          <span>Search</span> <%= f.text_field :search %>
-          <% end %>
-        </div>
-        
+    <% else %>
+      <div id="topbar">
+          <div id="toprightbar2">
+            <%= link_to "SIGN IN HELP", "https://en.wikipedia.org/wiki/Login", :class => "btn-mini" %>
+          </div>
       </div>
+    <% end %>
 
-<!-- missing -->
+  <!-- missing -->
 
-    </div>
+      </div>
   </div>        
 </div>

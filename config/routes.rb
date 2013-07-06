@@ -1,17 +1,19 @@
 Promorph::Application.routes.draw do
   resources :users
-  # resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
   # get "users/new"
 
-  root to: 'static_pages#home'
+  root to: 'sessions#new'
 
-  match '/dashboard', to: "dashboard#index"
-  match '/music', to: "music#index"
-
+  match '/home', to: "static_pages#home"
   match '/signup', to: 'users#new'
   
-  # match '/signin', to: 'sessions#new'
-  # match '/signout', to: 'sessions#destroy', via: :delete
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
+  match '/dashboard', to: "users#show"
+  match '/music', to: "music#index"
+
 end
 
   # The priority is based upon order of creation:
