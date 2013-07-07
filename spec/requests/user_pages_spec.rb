@@ -7,7 +7,7 @@ describe "User Pages" do
   describe "signup page" do
   	before { visit signup_path }
 
-  	it {should have_selector('h3',		text: 'Sign up') }
+  	it {should have_selector('h3',		text: 'Create an Account') }
   	it {should have_selector('title', text: 'Sign up') }
   end
 
