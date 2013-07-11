@@ -13,8 +13,8 @@ gem 'formtastic', '~> 2.2.1'
 group :development, :test do
 gem 'sqlite3'
 gem 'rspec-rails'
-gem 'guard-rspec'
-gem 'childprocess'
+# gem 'guard-rspec'
+# gem 'childprocess'
 end
 
 group :development do

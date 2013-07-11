@@ -340,6 +340,25 @@ li.error input, li.error textarea, li.error select {
   text-decoration: none;
 }
 
+#navmenu div.dropdown, #navmenu div.dropdown a {
+  display: inline;
+  position: relative;
+  margin: 0 24px 0 0;
+  font-size: 10px;
+  color: #B08D71;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+      color: #ffcda3;
+      text-decoration: none;
+    }
+}
+
+#navmenu span a:hover {
+  color: #ffcda3;
+  text-decoration: none;
+}
+
 #navmenu div.megamenu {
   display: inline;
   position: relative;
