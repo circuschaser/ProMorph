@@ -1,6 +1,12 @@
 # require SessionsHelper
 
 Promorph::Application.routes.draw do
+  get "genre/show"
+
+  get "composer/show"
+
+  get "piece/show"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   # get "users/new"
