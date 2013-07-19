@@ -8,6 +8,12 @@
 
 
 Piece.delete_all
+line_count = 0
 CSV.foreach("seedplay.txt", headers: true) do |row|
+	begin
+		line_count += 1
 		Piece.create! row.to_hash
+	rescue => e
+		puts "Failed on line #{line_count}: #{e}"
+	end
 end
