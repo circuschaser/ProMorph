@@ -16,8 +16,4 @@ CSV.foreach("seedplay.txt", headers: true) do |row|
 	rescue => e
 		puts "Failed on line #{line_count}: #{e}"
 	end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> b44661a0a8707ff7cce32ec6cf945326e127b069
