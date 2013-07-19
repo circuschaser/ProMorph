@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(:version => 20130716213329) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "pieces", :id => false, :force => true do |t|
+    t.text "title"
+    t.text "composer"
+    t.text "album"
+    t.text "genre"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"

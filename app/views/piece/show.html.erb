@@ -1,2 +1,18 @@
-<h1>Piece#show</h1>
-<p>Find me in app/views/piece/show.html.erb</p>
+<!-- Piece SHOW -->
+
+<p>Information about
+	<%= @piece.title %> by
+	<%= @piece.composer %>
+</p>
+
+<table>
+	<tr>
+		<th>Album</th>
+		<th>Genre</th>
+	</tr>
+	<tr>
+		<td><%= @piece.album %></td>
+		<td><%= @piece.genre %></td>
+	</tr>
+
+</table>

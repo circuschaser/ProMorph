@@ -1,2 +1,14 @@
-<h1>Composer#show</h1>
-<p>Find me in app/views/composer/show.html.erb</p>
+<!-- Composer SHOW -->
+
+<p>Click on any piece to see info about that piece.</p>
+
+<ul>
+	<%= @composer.pieces.each do |piece| %>
+	<li>
+		<%= link_to piece.title,
+				controller: "piece"
+				action: 	"show"
+				id: 		piece.id %>
+	</li>
+	<% end %>
+</ul>

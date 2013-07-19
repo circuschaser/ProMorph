@@ -3,23 +3,43 @@
 	<div class="paper_wrap">
 		<div class="paper">
 
-			<h1>My Music List</h1>
 
-<!-- missing begin -->
+			<h3>My Songs
+				<span>
+			  		<%= link_to "USELESS BUTTON", "#", :class => 'btn' %><br/>
+				</span>
+			</h3>
 
-<!-- temp LIST -->
-			<div id="music_list">
-				<ul>
-					<li>Song Title here</li>
-					<li>Another Song</li>
-					<li>Yet Another Empty Song</li>
-				</ul>
-			</div>
-<!-- missing end -->
+			<%= will_paginate @pieces, inner_window: 2 %>
+
+
+      <% if @pieces.size == 0 -%>
+      <p class="alert">You haven't added any music yet. <%= link_to "Add a new song or piece", new_music_path, :id => 'new_button' %> to get started!</p>
+      <% else -%>
+      <div>
+
+      	<table class="piece">
+
+        	<% @pieces.each do |piece| %>
+      		<tr>
+      			<td class="content_left">
+      				<%= piece[:title] %>
+      				<p class="meta"><%= piece[:composer] %>
+      				&ensp; &loz; &ensp; <%= piece[:album] %>
+      				&ensp; &loz; &ensp; <%= piece[:genre] %></p>
+      			</td>
+      		</tr>
+	        <% end %>
+    	</table>
+      </div>
+      <% end -%>
 
 		</div>
 	</div>
 </div>
 <div id="sidebar">
-	<%= link_to "Add a new piece", "#", :class => "btn" %><br/>
+  <h4>The Sidebar Headline</h4>
+  <p>Lorem ipsum Dolor Duis incididunt cillum cillum est ad nulla ex commodo elit Ut. Lorem ipsum Reprehenderit reprehenderit fugiat magna laborum aliqua ut aliqua. Lorem ipsum Pariatur Ut anim aliquip nisi aliqua in ut pariatur qui dolore culpa qui.</p>
 </div>
+
+
