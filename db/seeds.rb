@@ -9,14 +9,13 @@
 
 Piece.delete_all
 line_count = 0
-# CSV.foreach("seedplay.txt", headers: true) do |row|
-IO.foreach("seedplay.txt") do |line|
+CSV.foreach("seedplay.txt", headers: true) do |row|
 	begin
 		line_count += 1
-		# Piece.create! row.to_hash
-		title, composer, album, genre = line.chomp.split(",")
-		Piece.create!(title: title, composer: composer, album: album, genre: genre)
+		Piece.create! row.to_hash
 	rescue => e
 		puts "Failed on line #{line_count}: #{e}"
 	end
 end
+
+# line_count = 0
