@@ -10,7 +10,7 @@
 Piece.delete_all
 line_count = 0
 # CSV.foreach("seedplay.txt", headers: true) do |row|
-File.read("seedplay.txt").each do |line|
+File.foreach("seedplay.txt") do |line|
 	begin
 		line_count += 1
 		# Piece.create! row.to_hash
